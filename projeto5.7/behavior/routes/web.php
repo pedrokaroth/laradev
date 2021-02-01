@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/imoveis', 'PropertyController@index');
+
+Route::get('/imoveis/criar', 'PropertyController@create');
