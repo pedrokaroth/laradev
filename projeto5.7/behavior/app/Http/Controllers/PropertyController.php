@@ -33,4 +33,16 @@ class PropertyController extends Controller
 
         return redirect()->action('PropertyController@index');
     }
+
+    public function show($id)
+    {
+        $property = DB::select("SELECT * FROM properties WHERE id = {$id}");
+
+        if(empty($property)) {
+            return redirect()->action('PropertyController@index');
+        }
+
+        return view('property/show')->with('property', $property);
+
+    }
 }
