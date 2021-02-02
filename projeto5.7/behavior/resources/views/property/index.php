@@ -16,9 +16,9 @@
     foreach ($properties as $property) {
 
         $links = (object)[
-            'view' => url('imoveis/' . $property->id),
-            'edit' => url('imoveis/editar/' . $property->id),
-            'delete' => url('imoveis/deletar/' . $property->id)
+            'view' => url('imoveis/' . $property->name),
+            'edit' => url('imoveis/editar/' . $property->name),
+            'delete' => url('imoveis/deletar/' . $property->name)
         ];
 
         echo
