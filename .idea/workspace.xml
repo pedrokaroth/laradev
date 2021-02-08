@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1986e92c-f735-4239-abde-1d29328ba4e6" name="Default Changelist" comment="" />
+    <list default="true" id="1986e92c-f735-4239-abde-1d29328ba4e6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/projeto5.7/behavior/resources/views/property/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/projeto5.7/behavior/resources/views/property/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto5.7/behavior/resources/views/property/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/projeto5.7/behavior/resources/views/property/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto5.7/behavior/resources/views/property/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/projeto5.7/behavior/resources/views/property/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto5.7/behavior/resources/views/property/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/projeto5.7/behavior/resources/views/property/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto5.7/behavior/resources/views/property/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/projeto5.7/behavior/resources/views/property/show.blade.php" afterDir="false" />
+    </list>
+    <list id="e2033c55-493a-40f4-bfb3-d7ed5d1db2b7" name="noVersion" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/laravel-plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto5.7/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto5.7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/projeto5.7/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +38,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -132,16 +158,19 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1nsU9huixmJamZqEo7ZDVyxSUxv" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/projeto5.7" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -149,20 +178,96 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="PropertyController.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/projeto5.7/behavior/app/Http/Controllers/PropertyController.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.PropertyController.php" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="1986e92c-f735-4239-abde-1d29328ba4e6" name="Default Changelist" comment="" />
+      <changelist id="e2033c55-493a-40f4-bfb3-d7ed5d1db2b7" name="noVersion" comment="" />
       <created>1612178141256</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612178141256</updated>
       <workItem from="1612178142372" duration="207000" />
       <workItem from="1612178355106" duration="1393000" />
+      <workItem from="1612268116385" duration="40000" />
+      <workItem from="1612268210407" duration="1667000" />
+      <workItem from="1612270316544" duration="98000" />
+      <workItem from="1612270420727" duration="1814000" />
+      <workItem from="1612272247247" duration="858000" />
+      <workItem from="1612303411167" duration="88000" />
+      <workItem from="1612784706037" duration="3290000" />
+      <workItem from="1612788006219" duration="2377000" />
     </task>
+    <task id="LOCAL-00001" summary="Single e Listagem">
+      <created>1612271077938</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612271077938</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Adicionando URL amigável">
+      <created>1612273087429</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1612273087429</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Edição do Imóvel">
+      <created>1612786091303</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1612786091303</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Remoção de registros">
+      <created>1612786537558</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1612786537558</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Adicionando camada Model">
+      <created>1612787155554</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1612787155554</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Adicionando camada Model">
+      <created>1612787167350</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1612787167350</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Método create e save">
+      <created>1612787635862</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1612787635862</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Estruturando view master">
+      <created>1612788847410</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1612788847410</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +283,17 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Single e Listagem" />
+    <MESSAGE value="Adicionando URL amigável" />
+    <MESSAGE value="Edição do Imóvel" />
+    <MESSAGE value="Remoção de registros" />
+    <MESSAGE value="Adicionando camada Model" />
+    <MESSAGE value="Método create e save" />
+    <MESSAGE value="Estruturando view master" />
+    <option name="LAST_COMMIT_MESSAGE" value="Estruturando view master" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
