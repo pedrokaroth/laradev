@@ -21,3 +21,8 @@ Route::get('/imoveis/criar', 'PropertyController@create');
 Route::post('/imoveis/store', 'PropertyController@store');
 
 Route::get('/imoveis/{name}', 'PropertyController@show');
+
+Route::get('/imoveis/editar/{name}', 'PropertyController@edit');
+Route::put('/imoveis/update/{name}', 'PropertyController@update');
+
+
