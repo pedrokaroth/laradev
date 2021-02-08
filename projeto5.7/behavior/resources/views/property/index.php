@@ -18,7 +18,7 @@
         $links = (object)[
             'view' => url('imoveis/' . $property->name),
             'edit' => url('imoveis/editar/' . $property->name),
-            'delete' => url('imoveis/deletar/' . $property->name)
+            'delete' => url('imoveis/remover/' . $property->name)
         ];
 
         echo
