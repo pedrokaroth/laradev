@@ -4,19 +4,20 @@ namespace LaraDev\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use LaraDev\Property;
 
 class PropertyController extends Controller
 {
     public function index()
     {
-        $properties = DB::select("SELECT * FROM properties");
+        $properties = Property::all();
 
         return view('property/index')->with('properties', $properties);
     }
 
     public function show($name)
     {
-        $property = DB::select("SELECT * FROM properties WHERE name = ?", [$name]);
+        $property = Property::where('name', $name)->get();
 
         if(empty($property)) {
             return redirect()->action('PropertyController@index');
@@ -33,7 +34,7 @@ class PropertyController extends Controller
 
     public function edit($name)
     {
-        $property = DB::select("SELECT * FROM properties WHERE name = ?", [$name]);
+        $property = Property::where('name', $name)->get();
 
         if(empty($property)) {
             return redirect()->action('PropertyController@index');
@@ -79,7 +80,7 @@ class PropertyController extends Controller
 
     public function destroy($name)
     {
-        $property = DB::select("SELECT * FROM properties WHERE name = ?", [$name]);
+        $property = Property::where('name', $name)->get();
 
         if(!empty($property)) {
             DB::delete("DELETE FROM properties WHERE name = ?", [$name]);
@@ -91,7 +92,7 @@ class PropertyController extends Controller
     private function setName(Request $request) {
         $propertySlug = str_slug($request->title);
 
-        $properties = DB::select("SELECT * FROM properties");
+        $properties = Property::all();
 
         $inc = 0;
         foreach ($properties as $property) {
