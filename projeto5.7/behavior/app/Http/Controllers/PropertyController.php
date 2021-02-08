@@ -12,7 +12,7 @@ class PropertyController extends Controller
     {
         $properties = Property::all();
 
-        return view('property/index')->with('properties', $properties);
+        return view('property.index')->with('properties', $properties);
     }
 
     public function show($name)
@@ -23,13 +23,13 @@ class PropertyController extends Controller
             return redirect()->action('PropertyController@index');
         }
 
-        return view('property/show')->with('property', $property);
+        return view('property.show')->with('property', $property);
 
     }
 
     public function create()
     {
-        return view('property/create');
+        return view('property.create');
     }
 
     public function edit($name)
@@ -40,7 +40,7 @@ class PropertyController extends Controller
             return redirect()->action('PropertyController@index');
         }
 
-        return view('property/edit')->with('property', $property);
+        return view('property.edit')->with('property', $property);
 
     }
 
