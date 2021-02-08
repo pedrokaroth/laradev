@@ -1,30 +1,30 @@
 @extends('property.master')
 @section('content')
+    <div class="container my-3">
+        <h1> Listagem de Produtos </h1>
 
-    <h1> Listagem de Produtos </h1>
-
-    <?php if(!empty($properties)) {
-        echo "<table>";
-
-        echo
-        "<tr>
-            <td>Titulo</td>
-            <td>Descrição</td>
-            <td>Valor de Locação</td>
-            <td>Valor de Compra</td>
-            <td>Ações</td>
-        </tr>";
-
-        foreach ($properties as $property) {
-
-            $links = (object)[
-                'view' => url('imoveis/' . $property->name),
-                'edit' => url('imoveis/editar/' . $property->name),
-                'delete' => url('imoveis/remover/' . $property->name)
-            ];
+        <?php if(!empty($properties)) {
+            echo "<table class='table table-striped table-hover'>";
 
             echo
-                "<tr>
+            "<thead class='bg-dark text-white'>
+                <td>Titulo</td>
+                <td>Descrição</td>
+                <td>Valor de Locação</td>
+                <td>Valor de Compra</td>
+                <td>Ações</td>
+            </thead>";
+
+            foreach ($properties as $property) {
+
+                $links = (object)[
+                    'view' => url('imoveis/' . $property->name),
+                    'edit' => url('imoveis/editar/' . $property->name),
+                    'delete' => url('imoveis/remover/' . $property->name)
+                ];
+
+                echo
+                    "<tr>
                 <td>{$property->title}</td>
                 <td>{$property->description}</td>
                 <td> R$". number_format($property->rental_price, 2, ',',  '.') ."</td>
@@ -37,9 +37,9 @@
 
                 </td>
             </tr>";
-        }
+            }
 
-        echo "</table>";
-    } ?>
-
+            echo "</table>";
+        } ?>
+    </div>
 @endsection
