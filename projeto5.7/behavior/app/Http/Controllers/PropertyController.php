@@ -48,32 +48,29 @@ class PropertyController extends Controller
     {
 
         $property = [
-            $request->title,
-            $this->setName($request),
-            $request->description,
-            $request->rental_price,
-            $request->sale_price
+            'title' => $request->title,
+            'name' => $this->setName($request),
+            'description' => $request->description,
+            'rental_price' =>$request->rental_price,
+            'sale_price' => $request->sale_price
         ];
 
-        DB::insert("INSERT INTO properties (title,name, description, rental_price, sale_price)
-                          VALUES (?, ?, ?, ?, ?)", $property);
+        Property::create($property);
 
         return redirect()->action('PropertyController@index');
     }
 
     public function update(Request $request, $id)
     {
-        $property = [
-            $request->title,
-            $this->setName($request),
-            $request->description,
-            $request->rental_price,
-            $request->sale_price,
-            $id
-        ];
+        $property = Property::find($id);
 
-        DB::update("UPDATE properties SET title = ?, name = ?, description = ?, rental_price = ?, sale_price = ?
-                          WHERE id = ?", $property);
+        $property->title = $request->title;
+        $property->name = $this->setName($request);
+        $property->description = $request->description;
+        $property->rental_price = $request->rental_price;
+        $property->sale_price = $request->sale_price;
+
+        $property->save();
 
         return redirect()->action('PropertyController@index');
     }
