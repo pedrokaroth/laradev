@@ -16,3 +16,9 @@ Route::get('/', function () {
 });
 
 Route::view('/form', 'form');
+
+
+Route::get('/users/1', 'UserController@index');
+Route::get('/getData', 'UserController@getData');
+
+Route::post('postData', 'UserController@postData');

@@ -11,7 +11,9 @@
 <body>
 
 <div class="container my-5">
-    <form action="" autocomplete="off">
+    <form action="{{ url('/getData') }}" method="GET" autocomplete="off">
+        <?= csrf_field() ?>
+
         <div class="form-group">
             <label for="">Primeiro Nome</label>
             <input type="text" name="first_name" class="form-control" value="Pedro Afonso">
