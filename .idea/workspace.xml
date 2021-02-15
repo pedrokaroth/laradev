@@ -5,21 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1986e92c-f735-4239-abde-1d29328ba4e6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/projeto5.7/behavior/resources/views/property/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/projeto5.7/behavior/resources/views/property/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto5.7/behavior/resources/views/property/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/projeto5.7/behavior/resources/views/property/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto5.7/behavior/resources/views/property/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/projeto5.7/behavior/resources/views/property/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto5.7/behavior/resources/views/property/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/projeto5.7/behavior/resources/views/property/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto5.7/behavior/resources/views/property/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/projeto5.7/behavior/resources/views/property/show.blade.php" afterDir="false" />
-    </list>
-    <list id="e2033c55-493a-40f4-bfb3-d7ed5d1db2b7" name="noVersion" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/laravel-plugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto5.7/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto5.7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/projeto5.7/.idea/workspace.xml" afterDir="false" />
     </list>
+    <list id="e2033c55-493a-40f4-bfb3-d7ed5d1db2b7" name="noVersion" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +26,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -170,7 +159,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/projeto5.7/behavior" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -210,6 +199,7 @@
       <workItem from="1612303411167" duration="88000" />
       <workItem from="1612784706037" duration="3290000" />
       <workItem from="1612788006219" duration="2377000" />
+      <workItem from="1613392003999" duration="170000" />
     </task>
     <task id="LOCAL-00001" summary="Single e Listagem">
       <created>1612271077938</created>
