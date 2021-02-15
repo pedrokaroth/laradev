@@ -182,7 +182,7 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
-    <configuration name="PropertyController.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/projeto5.7/behavior/app/Http/Controllers/PropertyController.php">
+    <configuration name="PropertyController.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/projeto5.7/prototipo/app/Http/Controllers/PropertyController.php">
       <method v="2" />
     </configuration>
     <recent_temporary>
