@@ -18,7 +18,28 @@ Route::get('/', function () {
 Route::view('/form', 'form');
 
 
+/*
+ * GET
+ */
 Route::get('/users/1', 'UserController@index');
 Route::get('/getData', 'UserController@getData');
 
+/*
+ * POST
+ */
 Route::post('postData', 'UserController@postData');
+
+/*
+ * POST
+ */
+Route::put('/users/1', 'UserController@testePut');
+
+/*
+ * PATCH
+ */
+Route::patch('/users/1', 'UserController@testePatch');
+
+/*
+ * MATH PUT PATCH
+ */
+Route::match(['put', 'patch'], '/users/2', 'UserController@testeMatch');

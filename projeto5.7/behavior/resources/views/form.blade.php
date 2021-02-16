@@ -11,9 +11,11 @@
 <body>
 
 <div class="container my-5">
-    <form action="{{ url('/getData') }}" method="GET" autocomplete="off">
-        <?= csrf_field() ?>
+    <form action="{{ url('/users/2') }}" method="POST" autocomplete="off">
+        <?= csrf_field(); ?>
+        @method('PATCH')
 
+        <div class="form-group">
         <div class="form-group">
             <label for="">Primeiro Nome</label>
             <input type="text" name="first_name" class="form-control" value="Pedro Afonso">
