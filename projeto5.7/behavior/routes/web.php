@@ -43,3 +43,13 @@ Route::patch('/users/1', 'UserController@testePatch');
  * MATH PUT PATCH
  */
 Route::match(['put', 'patch'], '/users/2', 'UserController@testeMatch');
+
+/*
+ * DELETE
+ */
+Route::delete('/users/1', 'UserController@destroy');
+
+/*
+ * ANY
+ */
+Route::any('/users/any','UserController@any');

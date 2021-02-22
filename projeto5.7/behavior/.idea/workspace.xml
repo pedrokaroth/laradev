@@ -150,7 +150,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../cafecontrol" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -177,6 +177,7 @@
       <updated>1613391988972</updated>
       <workItem from="1613391990666" duration="10000" />
       <workItem from="1613392174582" duration="1694000" />
+      <workItem from="1613998073271" duration="1362000" />
     </task>
     <servers />
   </component>

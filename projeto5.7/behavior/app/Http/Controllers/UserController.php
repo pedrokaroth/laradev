@@ -3,6 +3,7 @@
 namespace LaraDev\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Routing\Route;
 
 /**
  * Class UserController
@@ -38,21 +39,53 @@ class UserController extends Controller
         return "<h1>Disparou a acao de POST</h1>";
     }
 
+    /**
+     * @param Request $request
+     * @return string
+     */
     public function testePut(Request $request): string
     {
         var_dump($request);
         return "<h1>Disparou a ação PUT</h1>";
     }
 
+    /**
+     * @param Request $request
+     * @return string
+     */
     public function testePatch(Request $request): string
     {
         var_dump($request);
         return "<h1>Disparou a ação PATCH</h1>";
     }
 
+    /**
+     * @param Request $request
+     * @return string
+     */
     public function testeMatch(Request $request): string
     {
         var_dump($request);
         return "<h1>Disparou a ação MATH</h1>";
+    }
+
+    /**
+     * @param Request $request
+     * @return string
+     */
+    public function destroy(Request $request): string
+    {
+        var_dump($request);
+        return "<h1>Disparou a DELETE</h1>";
+    }
+
+    /**
+     * @param Route $route
+     * @return string
+     */
+    public function any(Route $route): string
+    {
+        var_dump($route);
+        return "<h1>Disparou a ANY</h1>";
     }
 }

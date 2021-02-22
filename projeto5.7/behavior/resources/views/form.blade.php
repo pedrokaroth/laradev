@@ -11,9 +11,9 @@
 <body>
 
 <div class="container my-5">
-    <form action="{{ url('/users/2') }}" method="POST" autocomplete="off">
+    <form action="{{ url('/users/1') }}" method="POST" autocomplete="off">
         <?= csrf_field(); ?>
-        @method('PATCH')
+        @method('DELETE')
 
         <div class="form-group">
         <div class="form-group">
