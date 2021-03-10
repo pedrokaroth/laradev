@@ -4,8 +4,19 @@ namespace LaraDev\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+/**
+ * Class PostController
+ * @package LaraDev\Http\Controllers
+ */
 class PostController extends Controller
 {
+    /**
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function indexRedirect()
+    {
+        return redirect()->route('posts.index');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -16,6 +27,9 @@ class PostController extends Controller
         echo "<h1>Listagam de arigos</h1>";
     }
 
+    /**
+     *
+     */
     public function premium()
     {
         echo "<h1>Listagam de arigos premium</h1>";

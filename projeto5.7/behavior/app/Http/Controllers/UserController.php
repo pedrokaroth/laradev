@@ -88,4 +88,17 @@ class UserController extends Controller
         var_dump($route);
         return "<h1>Disparou a ANY</h1>";
     }
+
+    /**
+     * @param Route $route
+     * @return string
+     */
+    public function show(Route $route): string
+    {
+        var_dump($route);
+        return "<h1>Disparou a SHOW</h1>";
+    }
+
+
+
 }

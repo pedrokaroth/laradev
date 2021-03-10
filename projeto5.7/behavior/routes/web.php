@@ -58,9 +58,24 @@ Route::get('/getData', 'UserController@getData');*/
  */
 /*Route::any('/users/any','UserController@any');*/
 
-
-
-Route::get('/posts/premium', 'PostController@premium');
-/*Route::resource('posts', 'PostController')->only(['index', 'show']);*/
+/*Route::get('/posts/premium', 'PostController@premium');
+Route::resource('posts', 'PostController')->only(['index', 'show']);
 Route::resource('posts', 'PostController')->except(['destroy']);
-Route::get('/posts', 'PostController@index');
+Route::get('/posts', 'PostController@index');*/
+
+/*Route::get('/users', 'UserController@show');*/
+
+/*Route::get('/users', function() {
+    echo "Listagem dos usuários da minha base";
+});
+
+Route::view('/form', 'form');
+
+Route::fallback(function() {
+    echo "<h1>Ops seja muito bem vindo ao 404</h1>";
+});
+
+Route::redirect('/users/add', url('/form'), 301);*/
+
+Route::get('/posts', 'PostController@index')->name('posts.index');
+Route::get('/posts/index', 'PostController@indexRedirect')->name('posts.indexRedirect');
