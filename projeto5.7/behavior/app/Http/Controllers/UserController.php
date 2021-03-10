@@ -11,6 +11,11 @@ use Illuminate\Routing\Route;
  */
 class UserController extends Controller
 {
+    public function userComments(int $id, int $comment, Request $request)
+    {
+        echo "UserController@userComments";
+        var_dump($id, $comment, $request);
+    }
     /**
      * @return string
      */

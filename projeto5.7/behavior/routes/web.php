@@ -77,5 +77,25 @@ Route::fallback(function() {
 
 Route::redirect('/users/add', url('/form'), 301);*/
 
-Route::get('/posts', 'PostController@index')->name('posts.index');
-Route::get('/posts/index', 'PostController@indexRedirect')->name('posts.indexRedirect');
+/*Route::get('/posts', 'PostController@index')->name('posts.index');
+Route::get('/posts/index', 'PostController@indexRedirect')->name('posts.indexRedirect');*/
+
+/*Route::get('/users/{id}/comments/{comment}', function($id, $comment) {
+    var_dump($id, $comment);
+});*/
+
+/*Route::get('/users/{id}/comments/{comment?}', function($id, $comment = null) {
+    var_dump($id, $comment);
+})->where('id', '[0-9]+');*/
+
+/*Route::get('/users/{id}/comments/{comment?}', function($id, $comment = null) {
+    var_dump($id, $comment);
+})->where([
+    'id' => '[a-z0-9]+',
+    'comment' => '[a-zA-Z0-9]+'
+]);*/
+
+Route::get('/users/{id}/comments/{comment?}','userController@userComments')->where([
+    'id' => '[0-9]+',
+    'comment' => '[0-9]+'
+]);
