@@ -95,7 +95,9 @@ Route::get('/posts/index', 'PostController@indexRedirect')->name('posts.indexRed
     'comment' => '[a-zA-Z0-9]+'
 ]);*/
 
-Route::get('/users/{id}/comments/{comment?}','userController@userComments')->where([
+/*Route::get('/users/{id}/comments/{comment?}','userController@userComments')->where([
     'id' => '[0-9]+',
     'comment' => '[0-9]+'
-]);
+]);*/
+
+Route::get('/users/1', 'UserController@inspect')->name('inspect');

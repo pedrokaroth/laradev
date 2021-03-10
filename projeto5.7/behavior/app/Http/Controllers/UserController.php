@@ -3,7 +3,7 @@
 namespace LaraDev\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Route;
 
 /**
  * Class UserController
@@ -11,6 +11,23 @@ use Illuminate\Routing\Route;
  */
 class UserController extends Controller
 {
+
+    /**
+     *
+     */
+    public function inspect()
+    {
+        $route = Route::current();
+        $name = Route::currentRouteName();
+        $action = Route::currentRouteAction();
+
+        var_dump($route, $name, $action);
+    }
+    /**
+     * @param int $id
+     * @param int $comment
+     * @param Request $request
+     */
     public function userComments(int $id, int $comment, Request $request)
     {
         echo "UserController@userComments";
