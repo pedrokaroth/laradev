@@ -3,14 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Foundation\Application;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\View\View;
 
 class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Factory|Application|Response|View
      */
     public function index()
     {
@@ -112,7 +117,7 @@ class PostController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Factory|Application|Response|View
      */
     public function create()
     {
@@ -122,8 +127,8 @@ class PostController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return RedirectResponse
      */
     public function store(Request $request)
     {
@@ -186,8 +191,8 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Post  $post
-     * @return \Illuminate\Http\Response
+     * @param Post $post
+     * @return Response
      */
     public function show(Post $post)
     {
@@ -197,31 +202,64 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Post  $post
-     * @return \Illuminate\Http\Response
+     * @param Post $post
+     * @return Factory|Application|Response|View
      */
     public function edit(Post $post)
     {
-        //
+        return view('posts.edit', ['post' => $post]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Post  $post
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param Post $post
+     * @return RedirectResponse
      */
     public function update(Request $request, Post $post)
     {
-        //
+        /**
+         * Object Prop Save
+         * Nesse caso não é necessário instanciar o objeto, porque o parâmetro do método já é o próprio modelo
+         * Você pode omitir a instância ou ainda alimentar novamente a variável post utilizando o método find()
+         * Faz o uso do método save() no final para persistir os dados dentro do banco de dados
+         */
+        //$post = new Post; // não se deve utilizar a instância
+        $post = Post::find($post->id);
+        $post->title = $request->title;
+        $post->subtitle = $request->subtitle;
+        $post->description = $request->description;
+        $post->save();
+
+        /**
+         * Assim como você tem o firstOrCreate que busca um registro e caso não encontre ele cria um novo no banco de dados,
+         * o updateOrCreate tem basicamente a mesma responsabilidade... Mas ele vai buscar um registro, se não tiver ele cria,
+         * e se já exisitir ele atualiza os dados
+         * Não é necessário fazer o uso do método save() para persistir as informações
+         */
+//        $post = Post::updateOrCreate([
+//            'title' => 'teste5'
+//        ],[
+//            'subtitle' => 'teste6',
+//            'description' => 'teste6'
+//        ]);
+
+        /**
+         * Atualização em massa
+         * Informe a query builder com um coletivo de registros e passe o método update encadeado com um array associativo
+         * O array deve conter o nome do campo e o respectivo valor
+         */
+//        Post::where('created_at', '>=', date('Y-m-d H:i:s'))->update(['description' => 'teste']);
+
+        return redirect()->route('posts.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Post  $post
-     * @return \Illuminate\Http\Response
+     * @param Post $post
+     * @return Response
      */
     public function destroy(Post $post)
     {
