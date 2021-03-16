@@ -10,6 +10,10 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
 
+/**
+ * Class PostController
+ * @package App\Http\Controllers
+ */
 class PostController extends Controller
 {
     /**
@@ -285,5 +289,36 @@ class PostController extends Controller
 //        Post::where('created_at', '>=', date('Y-m-d H:i:s'))->delete();
 
         return redirect()->route('posts.index');
+    }
+
+    /**
+     * @return Factory|Application|View
+     */
+    public function trashed()
+    {
+        $posts = Post::onlyTrashed()->get();
+        return view('posts.trashed', ['posts' => $posts]);
+    }
+
+    /**
+     * @param $post
+     * @return RedirectResponse
+     */
+    public function restore($post)
+    {
+        $post = Post::onlyTrashed()->where(['id' => $post])->first();
+
+        if($post->trashed()) {
+            $post->restore();
+        }
+
+        return redirect()->route('posts.trashed');
+    }
+
+    public function forceDelete($post)
+    {
+        $post = Post::onlyTrashed()->where(['id' => $post])->forceDelete();
+
+        return redirect()->route('posts.trashed');
     }
 }
