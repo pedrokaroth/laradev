@@ -259,10 +259,31 @@ class PostController extends Controller
      * Remove the specified resource from storage.
      *
      * @param Post $post
-     * @return Response
+     * @return RedirectResponse
      */
     public function destroy(Post $post)
     {
-        //
+        /**
+         * Cria uma nova instância e deleta o registro
+         */
+//        Post::find($post->id)->delete();
+
+        /**
+         * Deleta vários registros
+         */
+//        Post::destroy([2, 3]);
+
+        /**
+         * Deleta o registro informado (que pode ou não ser o recebido pelo modelo)
+         */
+        Post::destroy($post->id);
+
+        /**
+         * Deleção de registros em massa
+         * Utilize o query Builder para retornar uma coleção de modelos e use o método delete()
+         */
+//        Post::where('created_at', '>=', date('Y-m-d H:i:s'))->delete();
+
+        return redirect()->route('posts.index');
     }
 }

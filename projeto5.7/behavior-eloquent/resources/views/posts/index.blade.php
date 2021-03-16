@@ -21,7 +21,12 @@
                     <h2><?= $post->subtitle ?></h2>
                     <p><?= $post->description ?></p>
                     <small>Criado em: <?= date('d/m/a H:i', strtotime($post->created_at)) ?> Editado em: <?= date('d/m/a H:i', strtotime($post->updated_at)) ?> </small>
-                    <p><a href="{{ route('posts.edit', ['id' => $post->id]) }}" class="btn btn-primary"> Editar</a></p>
+                    <form action="{{ route('posts.destroy', ['id' => $post->id]) }}" method="post">
+                        @method('DELETE')
+                        @csrf
+                        <a href="{{ route('posts.edit', ['id' => $post->id]) }}" class="btn btn-primary"> Editar</a>
+                        <button class="btn btn-danger">Excluir</button>
+                    </form>
                 </article>
                 <hr>
             </section>
