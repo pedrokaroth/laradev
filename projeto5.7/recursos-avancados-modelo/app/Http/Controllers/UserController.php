@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Address;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -48,12 +49,62 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::find($id);
-        var_dump($user);
+/*        var_dump($user);*/
 
         $userAddress = $user->address()->get()->first();
         if($userAddress) {
-            var_dump($userAddress);
+            //var_dump($userAddress);
         }
+
+        $addressTest = new Address([
+            'address' => 'Rua dos Bobos 2',
+            'number' => '0',
+            'complement' => 'Apto 123',
+            'zipcode' => '88000-000',
+            'city' => 'Floripa',
+            'state' => 'SC'
+        ]);
+
+        $address = new Address();
+        $address->address = 'Rua dos Bobos 3';
+        $address->number = 0;
+        $address->complement = 'Apto 123';
+        $address->zipcode = '88800-000';
+        $address->city = 'Floripa';
+        $address->state = 'SC';
+
+        //$user->address()->save($address);
+
+        //$user->address()->saveMany([$address, $addressTest]);
+
+/*        $user->address()->create([
+            'address' => 'Rua dos Bobos 2',
+            'number' => '0',
+            'complement' => 'Apto 123',
+            'zipcode' => '88000-000',
+            'city' => 'Floripa',
+            'state' => 'SC'
+        ]);*/
+
+/*        $user->address()->createMany([[
+            'address' => 'Rua dos Bobos 2',
+            'number' => '0',
+            'complement' => 'Apto 123',
+            'zipcode' => '88000-000',
+            'city' => 'Floripa',
+            'state' => 'SC'
+        ], [
+            'address' => 'Rua dos Bobos 2',
+            'number' => '0',
+            'complement' => 'Apto 123',
+            'zipcode' => '88000-000',
+            'city' => 'Floripa',
+            'state' => 'SC'
+        ]]);*/
+
+        $users = User::with('address')->get();
+        dd($users);
+
     }
 
     /**
