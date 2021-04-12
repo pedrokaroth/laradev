@@ -43,17 +43,18 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return Response
      */
-    public function show($id)
+    public function show(int $id)
     {
         $user = User::find($id);
-/*        var_dump($user);*/
+/*
+        var_dump($user);
 
         $userAddress = $user->address()->get()->first();
         if($userAddress) {
-            //var_dump($userAddress);
+            var_dump($userAddress);
         }
 
         $addressTest = new Address([
@@ -73,20 +74,20 @@ class UserController extends Controller
         $address->city = 'Floripa';
         $address->state = 'SC';
 
-        //$user->address()->save($address);
+        $user->address()->save($address);
 
-        //$user->address()->saveMany([$address, $addressTest]);
+        $user->address()->saveMany([$address, $addressTest]);
 
-/*        $user->address()->create([
+        $user->address()->create([
             'address' => 'Rua dos Bobos 2',
             'number' => '0',
             'complement' => 'Apto 123',
             'zipcode' => '88000-000',
             'city' => 'Floripa',
             'state' => 'SC'
-        ]);*/
+        ]);
 
-/*        $user->address()->createMany([[
+        $user->address()->createMany([[
             'address' => 'Rua dos Bobos 2',
             'number' => '0',
             'complement' => 'Apto 123',
@@ -100,10 +101,17 @@ class UserController extends Controller
             'zipcode' => '88000-000',
             'city' => 'Floripa',
             'state' => 'SC'
-        ]]);*/
+        ]]);
 
         $users = User::with('address')->get();
-        dd($users);
+        dd($users);*/
+
+        $posts = $user->posts()->get();
+        if($posts) {
+            foreach ($posts as $post) {
+                var_dump($post);
+            }
+        }
 
     }
 
