@@ -104,7 +104,7 @@ class UserController extends Controller
         ]]);
 
         $users = User::with('address')->get();
-        dd($users);*/
+        dd($users);
 
         $posts = $user->posts()->get();
         if($posts) {
@@ -112,7 +112,14 @@ class UserController extends Controller
                 var_dump($post);
             }
         }
+*/
+        $comments = $user->commentsOnMyPost()->get();
 
+        if($comments) {
+            foreach ($comments as $comment) {
+                echo "Post: {$comment->post} User: {$comment->user} {$comment->content}<br>";
+            }
+        }
     }
 
     /**
