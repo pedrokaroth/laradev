@@ -59,6 +59,14 @@ class PostController extends Controller
             echo "Nome de usuário: {$postAuthor->name}<br>";
             echo "E-mail: {$postAuthor->email}";
         }
+
+        $postCategories = $post->categories()->get();
+        if($postCategories) {
+            echo "<h1>Categorias</h1><br>";
+            foreach ($postCategories as $category) {
+                echo "Categoria: {$category->name}<br>";
+            }
+        }
     }
 
     /**
