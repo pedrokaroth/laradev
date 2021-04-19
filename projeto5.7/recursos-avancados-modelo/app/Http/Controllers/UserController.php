@@ -121,9 +121,9 @@ class UserController extends Controller
             }
         }*/
 
-        $user->comments()->create([
+/*        $user->comments()->create([
             'content' => 'Comentario de usuario'
-        ]);
+        ]);*/
 
         $comments = $user->comments()->get();
 
