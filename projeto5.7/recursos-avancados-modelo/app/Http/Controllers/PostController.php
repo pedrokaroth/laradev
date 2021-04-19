@@ -64,9 +64,13 @@ class PostController extends Controller
         if($postCategories) {
             echo "<h1>Categorias</h1><br>";
             foreach ($postCategories as $category) {
-                echo "Categoria: {$category->name}<br>";
+                echo "Categoria: #{$category->id} {$category->name}<br>";
             }
         }
+
+        //$post->categories()->attach([3, 4]);
+        //$post->categories()->detach([3, 4]);
+        //$post->categories()->sync([5, 10]);
     }
 
     /**
