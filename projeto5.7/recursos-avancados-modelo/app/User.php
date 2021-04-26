@@ -40,6 +40,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    protected $visible = [
+        'name', 'email', 'admin'
+    ];
+
+    protected $appends = [
+        'admin'
+    ];
+
     public function address(): HasOne
     {
         return $this->hasOne(Address::class, 'user', 'id');
@@ -68,5 +76,10 @@ class User extends Authenticatable
     public function scopeAdmins($query)
     {
         return $query->where('level' , '>', 5);
+    }
+
+    public function getAdminAttribute()
+    {
+        return $this->attributes['level'] > 5;
     }
 }
