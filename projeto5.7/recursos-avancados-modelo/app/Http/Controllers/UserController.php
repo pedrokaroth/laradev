@@ -125,12 +125,32 @@ class UserController extends Controller
             'content' => 'Comentario de usuario'
         ]);*/
 
-        $comments = $user->comments()->get();
+/*        $comments = $user->comments()->get();
 
         if($comments) {
             echo "<hr><h1>Comentario</h1>";
             foreach ($comments as $comment) {
                 echo "<br>Comentario #{$comment->id} {$comment->content}";
+            }
+        }*/
+
+        $students = User::students()->get();
+        if($students) {
+            echo "<h1>Listagem de Alunos</h1>";
+            foreach ($students as $student) {
+                echo "Nome do usuário: {$user->name}<br>";
+                echo "Email: {$user->email}<br>";
+
+            }
+        }
+
+        $admins = User::admins()->get();
+        if($admins) {
+            echo "<h1>Listagem de Administradores</h1>";
+            foreach ($admins as $admin) {
+                echo "Nome do usuário: {$admin->name}<br>";
+                echo "Email: {$admin->email}<br>";
+
             }
         }
     }
