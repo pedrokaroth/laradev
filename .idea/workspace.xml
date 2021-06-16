@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1986e92c-f735-4239-abde-1d29328ba4e6" name="Default Changelist" comment="">
+    <list default="true" id="1986e92c-f735-4239-abde-1d29328ba4e6" name="Default Changelist" comment="Estruturando view master">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="e2033c55-493a-40f4-bfb3-d7ed5d1db2b7" name="noVersion" comment="" />
@@ -159,7 +159,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/projeto5.7/behavior" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/projeto5.7/recursos-avancados-modelo" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -200,6 +200,7 @@
       <workItem from="1612784706037" duration="3290000" />
       <workItem from="1612788006219" duration="2377000" />
       <workItem from="1613392003999" duration="170000" />
+      <workItem from="1618838582416" duration="215000" />
     </task>
     <task id="LOCAL-00001" summary="Single e Listagem">
       <created>1612271077938</created>
