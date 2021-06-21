@@ -9,7 +9,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        $users = DB::table('users')
+/*        $users = DB::table('users')
             ->select('users.id', 'users.name', 'users.status')
             ->where('users.status', '=', '1')
             ->orderBy('name')
@@ -21,8 +21,16 @@ class UserController extends Controller
             ->get();
         foreach ($users as $user) {
             echo "#{$user->id} | {$user->name} | {$user->status}<br>";
-        }
+        }*/
 
+        $users = DB::table('users')
+            ->selectRaw('users.id, users.name, CASE WHEN users.status = 1 then "ATIVO" else "INATIVO" END as status_description')
+            ->whereRaw('(SELECT COUNT(1) FROM addresses a WHERE a.user = users.id) > 3')
+            ->orderByRaw('updated_at - created_at', 'ASC')
+            ->get();
+        foreach ($users as $user) {
+            echo "#{$user->id} | {$user->name} | {$user->status_description}<br>";
+        }
         var_dump($users);
     }
 }

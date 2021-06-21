@@ -4,7 +4,6 @@
     <list default="true" id="2ce413f2-3600-4538-967e-c3c6af56c57d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +192,9 @@
       <option name="presentableId" value="Default" />
       <updated>1623878474372</updated>
       <workItem from="1623878479366" duration="109000" />
-      <workItem from="1623878619609" duration="2086000" />
+      <workItem from="1623878619609" duration="2167000" />
+      <workItem from="1624309574630" duration="169000" />
+      <workItem from="1624309774890" duration="465000" />
     </task>
     <servers />
   </component>
@@ -210,5 +211,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
