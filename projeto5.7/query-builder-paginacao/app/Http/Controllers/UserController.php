@@ -40,20 +40,32 @@ class UserController extends Controller
             echo "<hr>";
         });*/
 
-        $users = DB::table('users')
+/*        $users = DB::table('users')
             //->whereIn('users.status', [0,1])
             //->whereNotIn('users.status', [0, 1])
             //->whereNull()
             //->whereNotNull('users.name')
             //->whereColumn('created_at', '=', 'updated_at')
             //->whereDate('created_at', '>', '2021-21-06 18:33')
-            ->whereDay('created_at', '=', '01')
+            //->whereDay('created_at', '=', '01')
             ->whereMonth('created_at', '=', '01')
             ->whereYear('created_at', '=', '01')
             ->whereTime('created_at', '=', '17:33')
+            ->get();*/
+
+        $users = DB::table('users')
+            ->select('users.id', 'users.name', 'users.status', 'addresses.address')
+            //->leftJoin('addresses', 'users.id', '=', 'addresses.user')
+            ->join('addresses', function($join) {
+                $join->on('users.id', '=', 'addresses.user')
+                    ->where('addresses.status', '=', '1');
+            })
+            ->orderBy('users.id', 'ASC')
             ->get();
+
+        echo "Total de registros: " . count($users) . "<br>";
         foreach ($users as $user) {
-            echo "#{$user->id} | {$user->name} | {$user->status}<br>";
+            echo "#{$user->id} | {$user->name} | {$user->status} | {$user->address}<br>";
         }
 
     }
