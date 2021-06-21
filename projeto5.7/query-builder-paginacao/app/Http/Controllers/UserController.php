@@ -33,11 +33,28 @@ class UserController extends Controller
         }
         var_dump($users);*/
 
-        DB::table('users')->where('id', '<', '500')->chunkById(100, function($users) {
+/*        DB::table('users')->where('id', '<', '500')->chunkById(100, function($users) {
             foreach ($users as $user) {
                 echo "#{$user->id} | {$user->name} | {$user->status}<br>";
             }
             echo "<hr>";
-        });
+        });*/
+
+        $users = DB::table('users')
+            //->whereIn('users.status', [0,1])
+            //->whereNotIn('users.status', [0, 1])
+            //->whereNull()
+            //->whereNotNull('users.name')
+            //->whereColumn('created_at', '=', 'updated_at')
+            //->whereDate('created_at', '>', '2021-21-06 18:33')
+            ->whereDay('created_at', '=', '01')
+            ->whereMonth('created_at', '=', '01')
+            ->whereYear('created_at', '=', '01')
+            ->whereTime('created_at', '=', '17:33')
+            ->get();
+        foreach ($users as $user) {
+            echo "#{$user->id} | {$user->name} | {$user->status}<br>";
+        }
+
     }
 }
