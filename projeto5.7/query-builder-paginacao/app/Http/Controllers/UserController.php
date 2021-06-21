@@ -53,7 +53,7 @@ class UserController extends Controller
             ->whereTime('created_at', '=', '17:33')
             ->get();*/
 
-        $users = DB::table('users')
+/*        $users = DB::table('users')
             ->select('users.id', 'users.name', 'users.status', 'addresses.address')
             //->leftJoin('addresses', 'users.id', '=', 'addresses.user')
             ->join('addresses', function($join) {
@@ -66,7 +66,22 @@ class UserController extends Controller
         echo "Total de registros: " . count($users) . "<br>";
         foreach ($users as $user) {
             echo "#{$user->id} | {$user->name} | {$user->status} | {$user->address}<br>";
-        }
+        }*/
+
+/*        DB::table('users')->insert([
+            'name' => 'Pedro Roth',
+            'email' => 'pedrokaroth@gmail.com',
+            'password' => bcrypt('12345'),
+            'status' => 1
+        ]);*/
+
+        DB::table('users')->where('id', '=', '1001')
+            ->update([
+                'email' => 'pedrokaroth@gmail.com'
+            ]);
+
+        DB::table('users')->where('id', '=', '1001')
+            ->delete();
 
     }
 }
