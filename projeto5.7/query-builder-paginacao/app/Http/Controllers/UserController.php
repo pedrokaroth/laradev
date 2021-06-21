@@ -75,13 +75,20 @@ class UserController extends Controller
             'status' => 1
         ]);*/
 
-        DB::table('users')->where('id', '=', '1001')
+/*        DB::table('users')->where('id', '=', '1001')
             ->update([
                 'email' => 'pedrokaroth@gmail.com'
             ]);
 
         DB::table('users')->where('id', '=', '1001')
-            ->delete();
+            ->delete();*/
 
+        $users = DB::table('users')->paginate(50);
+
+        foreach ($users as $user) {
+            echo "#{$user->id} | {$user->name} | {$user->status}<br>";
+        }
+
+        echo $users->links();
     }
 }
