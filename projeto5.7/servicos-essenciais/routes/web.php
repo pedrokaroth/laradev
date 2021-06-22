@@ -20,3 +20,40 @@ Route::get('/', function () {
 Route::get('/log', function() {
     Log::channel('slack')->info('teste');
 });
+
+Route::get('/session', function(){
+    session([
+        'curso' => 'LaraDev',
+        'nome' => 'Pedro Roth'
+    ]);
+
+/*    session()->put('nome', 'Pedro Afonso Roth Dimbarre');
+
+    echo session('estudante', function() {
+        session()->put('estudante', 'Pedro Afonso Roth Dimbarre');
+        return session('student');
+    });*/
+
+/*    echo session()->get('estudante');*/
+
+/*    session()->push('time', 'Pedro Roth');*/
+
+/*    $estudante = session()->pull('estudante');*/
+
+/*    session()->forget('nome');*/
+
+/*    if(session()->has('nome')) {
+        echo session('nome');
+    }*/
+
+/*    if(session()->exists('estudante')) {
+        echo session('nome');
+    } else {
+        echo "Indice inexistente";
+    }*/
+
+/*    session()->flash('message', 'O artigo foi publicado com sucesso');*/
+
+
+    var_dump(session()->all());
+});
