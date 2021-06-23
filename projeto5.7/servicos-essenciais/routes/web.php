@@ -71,3 +71,17 @@ Route::get('/email', function() {
     //\Illuminate\Support\Facades\Mail::to('pedrokaroth@gmail.com')->send(new \App\Mail\welcomeLaradev($user, $order));
     return new \App\Mail\welcomeLaradev($user, $order);
 });
+
+Route::get('/email-queue', function() {
+    $user = new stdClass();
+    $user->name = "Pedro Afonso Roh Dimbarre";
+    $user->email = "pedrokaroth@gmail.com";
+
+    $order = new stdClass();
+    $order->type = "Billet";
+    $order->due_at = "2019-01-10";
+    $order->value = 697;
+
+//    \Illuminate\Support\Facades\Mail::to('pedrokaroth@gmail.com')->send(new \App\Mail\welcomeLaradev($user, $order));
+    \App\Jobs\welcomeLaraDev::dispatch($user, $order)->delay(now()->addSecond(15));
+});
