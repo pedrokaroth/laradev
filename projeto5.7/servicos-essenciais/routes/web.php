@@ -85,3 +85,39 @@ Route::get('/email-queue', function() {
 //    \Illuminate\Support\Facades\Mail::to('pedrokaroth@gmail.com')->send(new \App\Mail\welcomeLaradev($user, $order));
     \App\Jobs\welcomeLaraDev::dispatch($user, $order)->delay(now()->addSecond(15));
 });
+
+Route::get('/files', function() {
+    $files = \Illuminate\Support\Facades\Storage::files();
+    $allFiles = \Illuminate\Support\Facades\Storage::allFiles();
+
+    $directories = \Illuminate\Support\Facades\Storage::directories('');
+    $allDirectories = \Illuminate\Support\Facades\Storage::allDirectories('');
+
+    \Illuminate\Support\Facades\Storage::makeDirectory('public/course');
+    \Illuminate\Support\Facades\Storage::deleteDirectory('public/course');
+
+    //\Illuminate\Support\Facades\Storage::disk('public')->put('upinside.txt', 'O melhor curso de laravel do mercado');
+    //\Illuminate\Support\Facades\Storage::put('upinside.txt', 'O melhor curso de laravel do mercado');
+
+    //echo \Illuminate\Support\Facades\Storage::get('upinside.txt');
+
+    //var_dump($allDirectories);
+
+    //return \Illuminate\Support\Facades\Storage::download('upinside.txt');
+
+/*    if(\Illuminate\Support\Facades\Storage::exists('upinside.txt')) {
+        echo "O arquivo existe";
+        return \Illuminate\Support\Facades\Storage::download('upinside.txt');
+    } else {
+        echo "O arquivo não existe";
+    }*/
+
+    //echo \Illuminate\Support\Facades\Storage::size('upinside.txt');
+
+    //\Illuminate\Support\Facades\Storage::prepend('upinside.txt', 'Upinside Treinamentos');
+    //\Illuminate\Support\Facades\Storage::append('upinside.txt', 'Upinside Treinamentos');
+
+    //\Illuminate\Support\Facades\Storage::copy('upinside.txt', 'public/upinside-123.txt');
+    //\Illuminate\Support\Facades\Storage::move('upinside.txt', 'public/upinside-123.txt');
+    //\Illuminate\Support\Facades\Storage::delete('public/upinside-123.txt');
+});
