@@ -57,3 +57,17 @@ Route::get('/session', function(){
 
     var_dump(session()->all());
 });
+
+Route::get('/email', function() {
+    $user = new stdClass();
+    $user->name = "Pedro Afonso Roh Dimbarre";
+    $user->email = "pedro.r@rotaexata.com.br";
+
+    $order = new stdClass();
+    $order->type = "Billet";
+    $order->due_at = "2019-01-10";
+    $order->value = 697;
+
+    //\Illuminate\Support\Facades\Mail::to('pedrokaroth@gmail.com')->send(new \App\Mail\welcomeLaradev($user, $order));
+    return new \App\Mail\welcomeLaradev($user, $order);
+});
