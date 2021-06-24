@@ -121,3 +121,7 @@ Route::get('/files', function() {
     //\Illuminate\Support\Facades\Storage::move('upinside.txt', 'public/upinside-123.txt');
     //\Illuminate\Support\Facades\Storage::delete('public/upinside-123.txt');
 });
+
+Route::resource('imoveis', 'PropertyController');
+
+
