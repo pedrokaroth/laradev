@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\checkParam;
 use \Illuminate\Support\Facades\Log;
 
 /*
@@ -123,5 +124,7 @@ Route::get('/files', function() {
 });
 
 Route::resource('imoveis', 'PropertyController');
+
+Route::get('/teste-mid', 'PropertyController@middle')->middleware('params:admin');
 
 
