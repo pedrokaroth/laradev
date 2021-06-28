@@ -27,3 +27,14 @@ Meu nome é {{ $user->name }}
     <p>Nivel 2</p>
     @break
 @endswitch
+
+<h2>Listagem de Cursos</h2>
+@foreach($courses as $course)
+    <div style="border: 1px solid black">
+        <h3>{{ $course['name'] }}</h3>
+        <p>Tutor: {{ $course['tutor'] }}</p>
+        @php
+            var_dump($loop);
+        @endphp
+    </div>
+@endforeach

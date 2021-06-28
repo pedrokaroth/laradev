@@ -20,10 +20,30 @@ Route::get('/', function() {
     $user->email = "pedrokaroth@gmail.com";
     $user->level = 2;
 
+    $courses = [
+        [
+            'id' => 1,
+            'name' => 'LaraDev',
+            'tutor' => 'Gustavo'
+
+        ],
+        [
+            'id' => 2,
+            'name' => 'Bootstrap Builder',
+            'tutor' => 'Gustavo'
+        ],
+        [
+            'id' => 3,
+            'name' =>'FullStack PHP Developer',
+            'tutor' => 'Robson'
+        ]
+    ];
+
     $alert = "<div style='background-color: red'>Alerta</div>";
 
     return view('front.home', [
         'user' => $user,
-        'alert' => $alert
+        'alert' => $alert,
+        'courses' => $courses
     ]);
 });
