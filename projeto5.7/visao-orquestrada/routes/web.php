@@ -11,6 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function() {
+
+    $user = new stdClass();
+    $user->name = "Pedro Afonso";
+    $user->birth = "1999-05-06";
+    $user->city = "Joinville";
+
+    $alert = "<div style='background-color: red'>Alerta</div>";
+
+    return view('front.home', [
+        'user' => $user,
+        'alert' => $alert
+    ]);
 });
