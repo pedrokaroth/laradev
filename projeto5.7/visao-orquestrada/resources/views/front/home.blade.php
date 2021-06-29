@@ -42,5 +42,19 @@
             @endphp
         </div>
     @endforeach
+    <div class="row">
+        <div class="col-12">
+            @component('front.components.alert', ['type' => 'danger'])
+                Mensagem de teste
+            @endcomponent
+        </div>
+    </div>
 
+    <div class="row">
+        <div class="col-12">
+            @alert(['type' => 'danger'])
+                Mensagem gerada pelo componente
+            @endalert
+        </div>
+    </div>
 @endsection
