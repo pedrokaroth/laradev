@@ -47,3 +47,7 @@ Route::get('/', function() {
         'courses' => $courses
     ]);
 });
+
+Route::get('/cursos', function () {
+    return view('front.course');
+});
